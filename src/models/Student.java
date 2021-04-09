@@ -15,11 +15,16 @@ public class Student extends Person{
         grades = new TreeMap<>();
     }
 
+    public Student(String firstName, String lastName, String address, LocalDate birthday) {
+        super(firstName, lastName, address, birthday);
+        grades = new TreeMap<>();
+    }
+
     public int getStudentNum() {
         return studentNum;
     }
 
-    private void setStudentNum(int studentNum) {
+    public void setStudentNum(int studentNum) {
         if (studentNum>=100000000)
             this.studentNum = studentNum;
         else
